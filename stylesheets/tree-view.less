@@ -1,21 +1,5 @@
 @import "ui-variables";
 
-.tree-view-scroller {
-  background: @tree-view-background-color;
-  font-size: @font-size;
-}
-
-.focusable-panel {
-  &:focus {
-    .selected:before {
-      background: @background-color-selected;
-    }
-
-    .selected > .name,
-    .selected > .name:before,
-    .selected > .list-item > .name,
-    .selected > .list-item > .name:before {
-      color: #fff !important;
-    }
-  }
+.tree-view {
+  background-color: @tree-view-background-color;
 }

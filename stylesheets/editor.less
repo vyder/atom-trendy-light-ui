@@ -2,13 +2,13 @@
 @import "ui-mixins";
 
 .editor.mini {
-  color: @text-color-highlight;
+  color: @input-text-color;
   background-color: @input-background-color;
   border: 1px solid @input-border-color;
   border-radius: @component-border-radius;
   padding-left: @component-padding/2;
 
-  .cursor { border-color: #fff; }
+  .cursor { border-color: @input-text-color; }
   .selection .region { background-color: lighten(@input-background-color, 10%); }
 }
 
