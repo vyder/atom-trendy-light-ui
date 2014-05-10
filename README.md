@@ -2,4 +2,4 @@
 
 A light UI theme inspired by trendy flat design.
 
-![Screenshot](/screenshot.png?raw=true)
+![Screenshot](https://raw.githubusercontent.com/teddybradford/trendy-light-ui/master/screenshot.png)
