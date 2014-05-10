@@ -1,78 +1,123 @@
-// Colors
+// COLORS
 
-@text-color: #aaa;
-@text-color-subtle: #555;
-@text-color-highlight: #fff;
-@text-color-selected: @text-color-highlight;
+// Turquoise
+@TURQUOISE: #1ABC9C;
+@GREEN_SEA: #16A085;
 
-@text-color-info: #5293d8;
-@text-color-success: #26c26a;
-@text-color-warning: #ff982d;
-@text-color-error: #c00;
+// Green
+@EMERALD: #2ECC71;
+@NEPHRITIS: #27AE60;
 
-@text-color-ignored: @text-color-subtle;
-@text-color-added: @text-color-success;
-@text-color-renamed: @text-color-info;
+// Blue
+@PETER_RIVER: #3498DB;
+@BELIZE_HOLE: #2980B9;
+
+// Purple
+@AMETHYST: #9B59B6;
+@WISTERIA: #8E44AD;
+
+// Dark blue-gray
+@WET_ASPHALT: #34495E;
+@MIDNIGHT_BLUE: #2C3E50;
+
+// Yellow-orange
+@SUN_FLOWER: #F1C40F;
+@ORANGE: #F39C12;
+
+// Orange-red
+@CARROT: #E67E22;
+@PUMPKIN: #D35400;
+
+// Red
+@ALIZARIN: #E74C3C;
+@POMEGRANATE: #C0392B;
+
+// Light gray
+@CLOUDS: #ECF0F1;
+@SILVER: #BDC3C7;
+
+// Gray
+@CONCRETE: #95A5A6;
+@ASBESTOS: #7F8C8D;
+
+@color-normal:    @ASBESTOS;
+@color-highlight: @CLOUDS;
+@color-selected:  @CLOUDS;
+@color-subtle:    @AMETHYST;
+@color-success:   @EMERALD;
+@color-info:      @PETER_RIVER;
+@color-warning:   @CARROT;
+@color-error:     @ALIZARIN;
+
+@text-color:           @color-normal;
+@text-color-highlight: @color-highlight;
+@text-color-selected:  @color-selected;
+@text-color-subtle:    @color-subtle;
+@text-color-success:   @color-success;
+@text-color-info:      @color-info;
+@text-color-warning:   @color-warning;
+@text-color-error:     @color-error;
+
+@text-color-ignored:  @text-color-subtle;
+@text-color-renamed:  @text-color-info;
+@text-color-added:    @text-color-success;
 @text-color-modified: @text-color-warning;
-@text-color-removed: @text-color-error;
+@text-color-removed:  @text-color-error;
 
-@background-color-info: #0098ff;
-@background-color-success: #17ca65;
-@background-color-warning: #ffaa2c;
-@background-color-error: #c00;
-@background-color-highlight: rgba(255, 255, 255, 0.07);
-@background-color-selected: #4182C4;
+@background-color-highlight: fadeout(@SILVER, 90%);
+@background-color-selected:  @WET_ASPHALT;
+@background-color-success:   @color-success;
+@background-color-info:      @color-info;
+@background-color-warning:   @color-warning;
+@background-color-error:     @color-error;
 
-@app-background-color: #333;
+@app-background-color: @ASBESTOS;
 
-@base-background-color: lighten(@tool-panel-background-color, 5%);
-@base-border-color: rgba(0, 0, 0, 0.5);
+@base-background-color: @ASBESTOS;
+@base-border-color:     rgba(0, 0, 0, 0.5);
 
-@pane-item-background-color: @base-background-color;
-@pane-item-border-color: rgba(0, 0, 0, 0.5);
+@pane-item-background-color: @MIDNIGHT_BLUE;
+@pane-item-border-color:     rgba(0, 0, 0, 0.5);
 
-@input-background-color: #212224;
-@input-border-color: @base-border-color;
+@input-background-color: @MIDNIGHT_BLUE;
+@input-border-color:     @base-border-color;
 
-@tool-panel-background-color: #1d1f21;
-@tool-panel-border-color: @base-border-color;
+@tool-panel-background-color: @WET_ASPHALT;
+@tool-panel-border-color:     @base-border-color;
 
-@inset-panel-background-color: #161719;
-@inset-panel-border-color: @base-border-color;
+@inset-panel-background-color: @MIDNIGHT_BLUE;
+@inset-panel-border-color:     @base-border-color;
 
-@panel-heading-background-color: #43484d;
-@panel-heading-border-color: fadein(@base-border-color, 10%);
+@panel-heading-background-color: @ASBESTOS;
+@panel-heading-border-color:     fadein(@base-border-color, 10%);
 
-@overlay-background-color: #202123;
-@overlay-border-color: @background-color-highlight;
+@overlay-background-color: @MIDNIGHT_BLUE;
+@overlay-border-color:     @background-color-highlight;
 
-@button-background-color: #43484d;
-@button-background-color-hover: lighten(@button-background-color, 5%);
-@button-background-color-selected: #5c6064;
-@button-border-color: @base-border-color;
+@button-background-color:          @MIDNIGHT_BLUE;
+@button-background-color-hover:    lighten(@button-background-color, 10%);
+@button-background-color-selected: darken(@button-background-color, 10%);
+@button-border-color:              @WET_ASPHALT;
 
-@tab-bar-background-color: #222;
-@tab-bar-border-color: darken(@tab-background-color-active, 10%);
-@tab-background-color: #333;
-@tab-background-color-active: #222;
-@tab-border-color: #484848;
+@tab-bar-background-color:    @TURQUOISE;
+@tab-background-color:        @TURQUOISE;
+@tab-background-color-active: @MIDNIGHT_BLUE;
 
-@tree-view-background-color: @tool-panel-background-color;
-@tree-view-border-color: @tool-panel-border-color;
+@tree-view-background-color: @CLOUDS;
+@tree-view-border-color:     @tool-panel-border-color;
 
-@scrollbar-background-color: rgba(42, 42, 42, 0.5);
-@scrollbar-color: rgba(92, 92, 92, 0.5);
+@scrollbar-background-color: @SILVER;
+@scrollbar-color:            @ASBESTOS;
 
-@ui-site-color-1: @background-color-success; // green
-@ui-site-color-2: @background-color-info; // blue
-@ui-site-color-3: @background-color-warning; // orange
-@ui-site-color-4: #db2ff4; // purple
-@ui-site-color-5: #f5e11d; // yellow
+@ui-site-color-1: @EMERALD;
+@ui-site-color-2: @PETER_RIVER;
+@ui-site-color-3: @CARROT;
+@ui-site-color-4: @AMETHYST;
+@ui-site-color-5: @SUN_FLOWER;
 
+// Spacing
 
-// Sizes
-
-@font-size: 13px;
+@ui-top-border-width: 0;
 
 @disclosure-arrow-size: 12px;
 
@@ -80,11 +125,11 @@
 @component-icon-padding: 5px;
 @component-icon-size: 16px;
 @component-line-height: 25px;
-@component-border-radius: 2px;
+@component-border-radius: 0px;
 
-@tab-height: 30px;
+@tab-height: 42px;
 
+// Typography
 
-// Other
-
-@font-family: 'Lucida Grande', 'Segoe UI', sans-serif;
+@font-size: 13px;
+@font-family:  "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
